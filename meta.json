@@ -1,0 +1,17 @@
+{
+  "dpf": {
+    "project": true,
+    "description": "Rename Me",
+    "maker": "SporePrintDSP",
+    "license": "ISC",
+    "midi_input": 0,
+    "midi_output": 0,
+    "plugin_formats": [
+      "lv2_sep",
+      "vst3",
+      "jack"
+    ],
+    "enable_ui": true
+  },
+  "nosimd": false
+}

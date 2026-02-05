@@ -1,0 +1,16 @@
+*.o
+*.d
+*.a
+*.dll
+*.exe
+*.so
+*.dylib
+build/
+bin/
+dpf/build/
+dpf/utils/lv2_ttl_generator
+dpf/utils/lv2_ttl_generator.exe
+dpf/utils/lv2_ttl_generator.d
+.DS_Store
+*.swp
+*~
