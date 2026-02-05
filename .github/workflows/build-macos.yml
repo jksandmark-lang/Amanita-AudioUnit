@@ -1,0 +1,33 @@
+name: Build macOS
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Build plugin
+      run: make
+    
+    - name: List build artifacts
+      run: |
+        echo "Build directory contents:"
+        ls -R bin/
+    
+    - name: Upload macOS binaries
+      uses: actions/upload-artifact@v4
+      with:
+        name: amanita-macos
+        path: bin/
+        if-no-files-found: error
