@@ -23,6 +23,7 @@ public:
     bool getState() const noexcept;
 
     void setId(uint32_t id) noexcept;
+    uint32_t getId() const noexcept;
     void setCallback(Callback* cb) noexcept;
 
 protected:

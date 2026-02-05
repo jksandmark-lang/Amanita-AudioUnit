@@ -45,6 +45,11 @@ void ThreeWaySwitch::setId(uint32_t id) noexcept
     fId = id;
 }
 
+uint32_t ThreeWaySwitch::getId() const noexcept
+{
+    return fId;
+}
+
 void ThreeWaySwitch::setCallback(Callback* cb) noexcept
 {
     fCallback = cb;
@@ -60,8 +65,6 @@ void ThreeWaySwitch::onDisplay()
 
 bool ThreeWaySwitch::onMouse(const MouseEvent& ev)
 {
-    if (SubWidget::onMouse(ev)) return true;
-
     if (!ev.press) return false;
     if (ev.button != 1) return false;
     const double px = ev.pos.getX();

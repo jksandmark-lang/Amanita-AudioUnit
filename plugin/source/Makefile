@@ -26,6 +26,7 @@ BUILD_CXX_FLAGS += -Wno-unused-parameter -fno-strict-aliasing -pthread
 LINK_FLAGS += -pthread
 
 TARGETS += au
+TARGETS += vst3
 
 
 all: $(TARGETS)
